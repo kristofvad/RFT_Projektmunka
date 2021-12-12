@@ -19,7 +19,7 @@ public class PageController {
     private StudentServiceInterface studentService;
 
     @Autowired
-    public PageController(StudentServiceInterface userService) {
+    public PageController(StudentServiceInterface studentService) {
         this.studentService = studentService;
     }
 
@@ -47,7 +47,7 @@ public class PageController {
     private TeacherServiceInterface teacherService;
 
     @Autowired
-    public PageController(TeacherServiceInterface userService) {
+    public PageController(TeacherServiceInterface teacherService) {
         this.teacherService = teacherService;
     }
 
@@ -64,5 +64,7 @@ public class PageController {
         model.addAttribute(TEACHER_MODEL_KEY, teacherService.getTeacherById(teacherId));
         return TEACHER_PAGE_NAME;
     }
+
+
 
 }
