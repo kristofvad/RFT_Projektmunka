@@ -15,11 +15,10 @@ public class CreateTeacherRequest {
 
 
     @NotBlank(message = "Name is mandatory")
-    private String studentName;
+    private String teacherName;
     @NotBlank(message = "Email is mandatory")
     private String emailAddress;
-    @NotBlank(message = "ClassName is mandatory")
-    private String className;
+
 
 
 }

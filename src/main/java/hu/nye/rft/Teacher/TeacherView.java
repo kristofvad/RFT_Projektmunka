@@ -15,8 +15,8 @@ public class TeacherView implements Comparable<TeacherView>{
     private Long teacherId;
     private String teacherName;
     private String emailAdress;
-    private Long classId;
-    private String className;
+//    private Long classId;
+//    private String className;
 
     @Override
     public int compareTo(TeacherView k) {

@@ -52,7 +52,7 @@ public class StudentController {
 
 
     @DeleteMapping(DELETE_STUDENT_MAPPING)
-    public void deleteUStudent(@PathVariable @NotNull Long id){
+    public void deleteStudent(@PathVariable @NotNull Long id){
         studentService.deleteStudentById(id);
     }
 }

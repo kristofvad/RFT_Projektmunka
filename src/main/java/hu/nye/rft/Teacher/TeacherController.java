@@ -29,7 +29,7 @@ public class TeacherController {
 
 
     @Autowired
-    public TeacherController(TeacherServiceInterface studentService) {
+    public TeacherController(TeacherServiceInterface teacherService) {
         this.teacherService = teacherService;
     }
 
@@ -49,7 +49,7 @@ public class TeacherController {
 
     @PostMapping(path = ADD_TEACHER)
     @ResponseStatus(HttpStatus.CREATED)
-    public void setAddTeacher(@Valid @RequestBody CreateTeacherRequest request){
+    public void addTeacher(@Valid @RequestBody CreateTeacherRequest request){
         teacherService.addTeacher(request);
     }
 

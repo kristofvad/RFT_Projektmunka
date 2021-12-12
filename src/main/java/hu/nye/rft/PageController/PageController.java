@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 public class PageController {
 
     private static final String STUDENT_PAGE_MAPPING = "/studentPage/{id}";
-   // private static final String ROOT_MAPPING = "/";
+    private static final String ROOT_MAPPING2 = "/";
     private static final String STUDENT_PAGE_NAME = "StudentPage";
     private static final String STUDENT_LIST_PAGE_NAME = "StudentListPage";
     private static final String STUDENTS_MODEL_KEY = "students";
@@ -24,11 +24,11 @@ public class PageController {
     }
 
 
-//    @GetMapping(ROOT_MAPPING)
-//    public String homePage(Model model) {
-//        model.addAttribute(STUDENTS_MODEL_KEY, studentService.getAllStudent());
-//        return STUDENT_LIST_PAGE_NAME;
-//    }
+    @GetMapping(ROOT_MAPPING2)
+    public String homePage(Model model) {
+        model.addAttribute(STUDENTS_MODEL_KEY, studentService.getAllStudent());
+        return STUDENT_LIST_PAGE_NAME;
+    }
 
 
     @GetMapping(STUDENT_PAGE_MAPPING)
@@ -38,7 +38,7 @@ public class PageController {
     }
 
     private static final String TEACHER_PAGE_MAPPING = "/teacherPage/{teacherId}";
-   // private static final String ROOT_MAPPING = "/";
+    private static final String ROOT_MAPPING = "/";
     private static final String TEACHER_PAGE_NAME = "TeacherPage";
     private static final String TEACHER_LIST_PAGE_NAME = "TeacherListPage";
     private static final String TEACHERS_MODEL_KEY = "teachers";
@@ -52,11 +52,11 @@ public class PageController {
     }
 
 
-//    @GetMapping(ROOT_MAPPING)
-//    public String Page(Model model) {
-//        model.addAttribute(TEACHERS_MODEL_KEY, teacherService.getAllTeacher());
-//        return TEACHER_LIST_PAGE_NAME;
-//    }
+    @GetMapping(ROOT_MAPPING)
+    public String Page(Model model) {
+        model.addAttribute(TEACHERS_MODEL_KEY, teacherService.getAllTeacher());
+        return TEACHER_LIST_PAGE_NAME;
+    }
 
 
     @GetMapping(TEACHER_PAGE_MAPPING)

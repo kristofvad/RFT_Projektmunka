@@ -13,10 +13,8 @@ import javax.validation.constraints.NotBlank;
 public class CreateStudentRequest {
 
 
-    @NotBlank(message = "Name is mandatory")
-    private String studentName;
-    @NotBlank(message = "Email is mandatory")
-    private String emailAddress;
+    private Long studentId;
+    private Long classId;
 
 
 }
